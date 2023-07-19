@@ -4,10 +4,20 @@
   <!-- style 태그는 태그 내부에 있는 코드가
     CSS임을 웹브라우저에게 알리는 구분자 -->
   <style>
+    /* class 선택자 '.'는 grouping할 때 사용함 */
     .js{ /* class가 js인 모든 태그의 스타일 지정 */
       font-weight: bold;
       color: red;
     }
+    /* id 선택자 '#'은 하나하나를 식별시킬 때 사용함 */
+    #first{ /* id가 first인 모든 태그의 스타일 지정 */
+      color: green; /* id가 first인 color를 green으로 설정 */
+    }
+    /* 기호가 아무것도 없다면 곧 태그 선택자가 됨 */
+    span{ /* 모든 span 태그의 스타일 지정 */
+      color: blue;
+    }
+    /* 선택자 우선순위: id선택자(#) > class선택자(.) > 태그선택자 */
   </style>
 </head>
 <body>
@@ -21,7 +31,8 @@
     <!-- 위에서 style 속성의 값을 "font-weight: bold", 
       "color: red"로 설정하여 JavaScript 글자를 굵게 하고
       빨간색으로 만듦 -->
-    <span class="js">JavaScript</span> (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, <span class="js">JavaScript</span> is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in <span class="js">JavaScript</span> engine. Each of the many <span class="js">JavaScript</span> engines represent a different implementation of <span class="js">JavaScript</span>, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+    <!-- 첫 번째 JavaScript 글자의 id를 first로 함 -->
+    <span id="first" class="js">JavaScript</span> (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside <span>HTML</span> and <span>CSS</span>, <span class="js">JavaScript</span> is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in <span class="js">JavaScript</span> engine. Each of the many <span class="js">JavaScript</span> engines represent a different implementation of <span class="js">JavaScript</span>, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
   </p>
 </body>
 </html>
