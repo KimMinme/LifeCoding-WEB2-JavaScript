@@ -6,6 +6,18 @@
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
+  <!-- HTML body 태그의 스타일을 동적으로 설정하는 
+    night와 day 버튼 생성 -->
+  <input type="button" value="night" onclick="
+    // 배경색 black, 글자색 white
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+  ">
+  <input type="button" value="day" onclick="
+    // 배경색 white, 글자색 black
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+  ">
   <ol>
     <li><a href="1.html">HTML</a></li>
     <li><a href="2.html">CSS</a></li>
