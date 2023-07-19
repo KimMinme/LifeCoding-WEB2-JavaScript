@@ -8,6 +8,7 @@
   <h1><a href="index.html">WEB</a></h1>
   <!-- HTML body 태그의 스타일을 동적으로 설정하는 
     night와 day 버튼 생성 -->
+  <!--
   <input type="button" value="night" onclick="
     // 배경색 black, 글자색 white
     document.querySelector('body').style.backgroundColor = 'black';
@@ -17,6 +18,22 @@
     // 배경색 white, 글자색 black
     document.querySelector('body').style.backgroundColor = 'white';
     document.querySelector('body').style.color = 'black';
+  ">
+  -->
+  <!-- 위 코드를 조건문을 사용하여 아래와 같이 바꿈 -->
+  <input id="night_day" type="button" value="night" onclick="
+    // document.querySelector().value로 value 값을 가져옴
+    if (document.querySelector('#night_day').value === 'night'){
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+      // value를'day'로 바꿈
+      document.querySelector('#night_day').value = 'day';
+    } else {
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+      // value를 'night'로 바꿈
+      document.querySelector('#night_day').value = 'night';
+    }
   ">
   <ol>
     <li><a href="1.html">HTML</a></li>
