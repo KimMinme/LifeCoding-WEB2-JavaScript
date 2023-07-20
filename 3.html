@@ -21,18 +21,21 @@
   ">
   -->
   <!-- 위 코드를 조건문을 사용하여 아래와 같이 바꿈 -->
-  <input id="night_day" type="button" value="night" onclick="
-    // document.querySelector().value로 value 값을 가져옴
-    if (document.querySelector('#night_day').value === 'night'){
-      document.querySelector('body').style.backgroundColor = 'black';
-      document.querySelector('body').style.color = 'white';
+  <input type="button" value="night" onclick="
+    /* document.querySelector().value로 value 값을 가져왔었는데, 
+      this.value로 코드를 간결하고 편리하게 만듦 */
+    // target 변수로 코드량을 줄이고 코드를 편리하게 만듦
+    var target = document.querySelector('body')
+    if (this.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
       // value를'day'로 바꿈
-      document.querySelector('#night_day').value = 'day';
+      this.value = 'day';
     } else {
-      document.querySelector('body').style.backgroundColor = 'white';
-      document.querySelector('body').style.color = 'black';
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
       // value를 'night'로 바꿈
-      document.querySelector('#night_day').value = 'night';
+      this.value = 'night';
     }
   ">
   <ol>
