@@ -31,11 +31,27 @@
       target.style.color = 'white';
       // value를'day'로 바꿈
       this.value = 'day';
+
+      // 반복문을 사용하여 night mode일 때의 모든 링크색을 powderblue로 함
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+      }
     } else {
       target.style.backgroundColor = 'white';
       target.style.color = 'black';
       // value를 'night'로 바꿈
       this.value = 'night';
+
+      // 반복문을 사용하여 day mode일 때의 모든 링크색을 blue로 함
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+          alist[i].style.color = 'blue';
+          i = i + 1;
+      }
     }
   ">
   <ol>
