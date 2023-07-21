@@ -3,9 +3,17 @@
 <head>
   <title>WEB1 - CSS</title>
   <meta charset="utf-8">
+  <!-- script 삽입 -->
+  <!-- 스크립트 내용을 color.js로 옮기고 src 속성으로
+    가져옴으로써 코드의 관리성을 높임 -->
+  <script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
+  <!-- input 태그 가져다 붙이기 -->
+  <input type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
   <ol>
     <li><a href="1.html">HTML</a></li>
     <li><a href="2.html">CSS</a></li>
